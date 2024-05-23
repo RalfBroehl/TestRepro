@@ -11,7 +11,7 @@ pipeline {
         timeout(time: 12, unit: 'HOURS')
 
         // add timestamps to the log
-        timestamps()
+        //timestamps()
     }
 
     // this section configures triggers
