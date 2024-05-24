@@ -29,8 +29,7 @@ pipeline {
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
-                sh 'echo "CHOICES = $CHOICES"'
-                 if ($CHOICES == "one") {
+                if ($CHOICES == "one") {
                             echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
                         }
             }
