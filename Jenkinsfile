@@ -1,10 +1,7 @@
 pipeline {
     agent any
-     parameters {
-    choice(
-        name: 'ENVIRONMEN',
-        choices: "DEV\SI\PROD",
-        description: 'Stage auswählen' )
+     parameters { 
+       choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '') }
   }
 
     // this section configures Jenkins options
