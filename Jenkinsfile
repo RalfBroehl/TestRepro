@@ -27,6 +27,7 @@ pipeline {
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
+                parameters { choice(name: 'CHOICES', choices: ['DEV', 'SI', 'PROD'], description: 'Stage auswählen') }
             }
         }
         stage('Build') {
