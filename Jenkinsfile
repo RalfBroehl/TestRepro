@@ -29,10 +29,7 @@ pipeline {
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
-                if ($CHOICES == "one") {
-                            echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-                        }
-            }
+                }
         }
         stage('Build') {
             steps {
