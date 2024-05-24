@@ -31,7 +31,7 @@ pipeline {
                 echo 'Installing requirements...'
                 sh 'echo "CHOICES = $CHOICES"'
                  if ($CHOICES == "one") {
-                            echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+                            echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
                         }
             }
         }
