@@ -30,9 +30,9 @@ pipeline {
             steps {
                        script {
                     sh """
-                        if [ -z \${SKIP_BUILD} ]
+                        if [ -z \${CHOICES == 'one"} ]
                         then
-                          echo "starting build ..."
+                          echo "starting build one..."
                         else
                           echo "skipped build ..."
                         fi
