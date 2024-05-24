@@ -1,5 +1,11 @@
 pipeline {
     agent any
+     parameters {
+    choice(
+        name: 'ENVIRONMEN',
+        choices: "DEV\SI\PROD",
+        description: 'Stage auswählen' )
+  }
 
     // this section configures Jenkins options
     options {
@@ -27,7 +33,7 @@ pipeline {
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
-                parameters { choice(name: 'CHOICES', choices: ['DEV', 'SI', 'PROD'], description: 'Stage auswählen') }
+               
             }
         }
         stage('Build') {
