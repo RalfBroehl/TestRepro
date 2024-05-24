@@ -30,7 +30,7 @@ pipeline {
             steps {
                        script {
                     sh """
-                        if [ -z \${CHOICES == 'one"} ]
+                        if [ -z \${CHOICES == 'one'} ]
                         then
                           echo "starting build one..."
                         else
