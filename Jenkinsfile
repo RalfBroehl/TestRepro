@@ -29,6 +29,7 @@ pipeline {
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
+                sh 'echo "ENVIRONMENT = $ENVIRONMENT"'
             }
         }
         stage('Build') {
