@@ -30,10 +30,10 @@ pipeline {
                when {
                 // Only say hello if a "greeting" is requested
                 expression { params.CHOICES == 'one' }
-            steps {
+               }
+                   steps {
                     echo 'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO'
             }
-        }
             
         }
         stage('Build') {
