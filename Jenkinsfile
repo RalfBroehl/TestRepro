@@ -34,6 +34,8 @@ pipeline {
                     echo 'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO'
             }
         }
+            
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
