@@ -28,16 +28,7 @@ pipeline {
     stages {
         stage('Requirements') {
             steps {
-                       script {
-                    sh """
-                        if [ -z \${CHOICES == 'one'} ]
-                        then
-                          echo "starting build one..."
-                        else
-                          echo "skipped build ..."
-                        fi
-                    """
-                }
+
             }
         }
         stage('Build') {
