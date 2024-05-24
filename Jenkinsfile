@@ -27,12 +27,18 @@ pipeline {
     // the pipeline section we all know and love: stages! :D
     stages {
         stage('Requirements') {
-            when {$CHOICES == 'one'
             steps {
-                echo 'Installing requirements...'
-                echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-            }
+                       script {
+                    sh """
+                        if [ -z \${SKIP_BUILD} ]
+                        then
+                          echo "starting build ..."
+                        else
+                          echo "skipped build ..."
+                        fi
+                    """
                 }
+            }
         }
         stage('Build') {
             steps {
