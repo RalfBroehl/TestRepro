@@ -26,12 +26,13 @@ pipeline {
 
     // the pipeline section we all know and love: stages! :D
     stages {
-        if (false) {
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
+                when {$CHOICES == 'one'
+                echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+            }
                 }
-        }
         }
         stage('Build') {
             steps {
