@@ -1,8 +1,5 @@
 pipeline {
     agent any
-     parameters { 
-       choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '') 
-  }
 
     // this section configures Jenkins options
     options {
@@ -14,7 +11,7 @@ pipeline {
         timeout(time: 12, unit: 'HOURS')
 
         // add timestamps to the log
-        //timestamps()
+        timestamps()
     }
 
     // this section configures triggers
@@ -30,7 +27,6 @@ pipeline {
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
-               
             }
         }
         stage('Build') {
