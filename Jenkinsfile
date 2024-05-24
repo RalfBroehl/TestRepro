@@ -27,8 +27,11 @@ pipeline {
     // the pipeline section we all know and love: stages! :D
     stages {
         stage('Requirements') {
+               when {
+                // Only say hello if a "greeting" is requested
+                expression { params.CHOICES == 'one' }
             steps {
-
+                    echo 'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO'
             }
         }
         stage('Build') {
