@@ -1,5 +1,7 @@
 pipeline {
     agent any
+    parameters { 
+       choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '') }
 
     // this section configures Jenkins options
     options {
