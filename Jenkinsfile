@@ -26,10 +26,12 @@ pipeline {
 
     // the pipeline section we all know and love: stages! :D
     stages {
+        if (false) {
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
                 }
+        }
         }
         stage('Build') {
             steps {
